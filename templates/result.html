@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Data Results(first 5 videos)</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>YouTube Data Results(first 5 videos)</h1>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Links</th>
+            <th>Thumbnails</th>
+            <th>Views</th>
+            <th>Time of Posting</th>
+        </tr>
+        {% for video in data %}
+            <tr>
+                <td>{{ video.title }}</td>
+                <td><a href="{{ video.link }}">{{ video.link }}</a></td>
+                <td><img src="{{ video.thumbnail }}" alt="Thumbnail"></td>
+                <td>{{ video.view_count }}</td>
+                <td>{{ video.time_posted }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

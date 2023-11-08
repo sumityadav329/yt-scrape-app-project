@@ -1,0 +1,3 @@
+Flask
+selenium==4.0.0
+gunicorn

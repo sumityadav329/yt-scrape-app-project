@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Data Scraper</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>YouTube Data Scraper</h1>
+    <form action="/scrape" method="POST">
+        <label for="channel_url">Enter YouTube Channel URL:</label>
+        <input type="text" id="channel_url" name="channel_url" required>
+        <button type="submit">Scrape Data</button>
+    </form>
+</body>
+</html>
