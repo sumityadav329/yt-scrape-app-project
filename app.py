@@ -19,9 +19,9 @@ app = Flask(__name__)
 def initialize_webdriver():
     service = Service('chromedriver.exe')
     # Set Chrome options for headless mode
-    options.add_argument('--headless')  # Run Chrome in headless mode
-    options.add_argument('--disable-gpu')  # Disable GPU usage, which can cause issues in headless mode
-    options.add_argument('--no-sandbox')  # Disable sandboxing for headless mode (useful in some environments)
+    #options.add_argument('--headless')  # Run Chrome in headless mode
+    #options.add_argument('--disable-gpu')  # Disable GPU usage, which can cause issues in headless mode
+    #options.add_argument('--no-sandbox')  # Disable sandboxing for headless mode (useful in some environments)
 
     options = webdriver.ChromeOptions()
     return webdriver.Chrome(service=service, options=options)
@@ -98,4 +98,4 @@ def scrape():
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0",port=8000)
+    app.run(host="0.0.0.0",port=5000)
